@@ -1,0 +1,166 @@
+/* Global styling */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #050b05;
+  color: #80ff80;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  padding: 30px;
+  line-height: 1.6;
+  text-shadow: 0 0 5px #2c8a2c;
+}
+
+/* Main terminal header */
+
+header {
+  text-align: center;
+  border: 2px solid #50ff50;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 15px #205c20;
+}
+
+.terminal-label {
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+h1 {
+  font-size: 42px;
+  color: #aaffaa;
+  text-shadow: 0 0 15px #32ff32;
+  margin-bottom: 20px;
+}
+
+/* Section headings */
+
+h2 {
+  color: #aaffaa;
+  font-size: 26px;
+  border-bottom: 2px solid #50ff50;
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+/* Main content */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section {
+  border: 1px solid #358535;
+  padding: 25px;
+  margin-bottom: 30px;
+  background-color: #091409;
+  box-shadow: 0 0 10px #123d12;
+}
+
+section p {
+  margin-bottom: 20px;
+}
+
+/* Table styling */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #143814;
+  color: #baffba;
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #348834;
+}
+
+td {
+  padding: 12px;
+  border: 1px solid #245c24;
+}
+
+tr:hover {
+  background-color: #173d17;
+}
+
+/* Code examples */
+
+code {
+  color: #c2ffc2;
+  background-color: #173017;
+  padding: 3px 6px;
+  font-size: 15px;
+}
+
+/* Blinking terminal cursor */
+
+.cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 2px solid #50ff50;
+  padding-top: 20px;
+  font-size: 13px;
+}
+
+.prompt {
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+/* Mobile screen adjustments */
+
+@media (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+
+  header,
+  section {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  th,
+  td {
+    padding: 7px;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  code {
+    font-size: 12px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+  }
+}
